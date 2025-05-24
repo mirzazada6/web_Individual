@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentEase - Item Rental Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with improved navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <h1 class="logo"><i class="fas fa-exchange-alt"></i>SHARY.az</h1>
+          <p class="tagline">Rent anything, anytime, anywhere</p>
+        </div>
+        
+        <nav class="nav">
+          <ul>
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> How it works?</a></li>
+            <li><a href="#"><i class="fas fa-box-open"></i> Items</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
+            <li><a href="#"><i class="fas fa-headset"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <button class="sign-in-btn"><i class="fas fa-user"></i> Sign In</button>
+          <button class="sign-up-btn"><i class="fas fa-user-plus"></i> Sign Up</button>
+        </div>
+        
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Rent What You Need, When You Need It</h2>
+        <p>Thousands of items available for rent at affordable prices</p>
+        
+        <div class="search-bar">
+          <div class="search-input">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="What are you looking for?">
+          </div>
+          <div class="location-input">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Location">
+          </div>
+          <button class="search-btn">Search</button>
+        </div>
+        
+        <div class="popular-tags">
+          <span>Popular:</span>
+          <a href="#">Tools</a>
+          <a href="#">Electronics</a>
+          <a href="#">Party Supplies</a>
+          <a href="#">Outdoor Gear</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works?</h2>
+      <p class="section-subtitle">Renting has never been easier</p>
+      
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Create an Account</h3>
+          <p>Sign up in minutes and verify your identity</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-search"></i></div>
+          <h3>Find Your Item</h3>
+          <p>Browse thousands of available items near you</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Make Reservation</h3>
+          <p>Choose your dates and book instantly</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fas fa-smile"></i></div>
+          <h3>Enjoy Your Rental</h3>
+          <p>Pick up or get it delivered, then return when done</p>
+        </div>
+      </div>
+      
+      <div class="video-demo">
+        <div class="video-placeholder">
+          <i class="fas fa-play"></i>
+          <p>Watch our 1-minute demo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Items Section -->
+  <section class="rental-items">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Available for Rent</h2>
+          <p class="section-subtitle">Browse our most popular items</p>
+        </div>
+        
+        <div class="filter-options">
+          <div class="filter-group">
+            <label for="category-filter"><i class="fas fa-filter"></i> Category</label>
+            <select id="category-filter">
+              <option value="all">All Categories</option>
+              <option value="tools">Tools</option>
+              <option value="electronics">Electronics</option>
+              <option value="party">Party Supplies</option>
+              <option value="sports">Sports Equipment</option>
+              <option value="outdoor">Outdoor Gear</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="sort-by"><i class="fas fa-sort"></i> Sort By</label>
+            <select id="sort-by">
+              <option value="popular">Most Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest Arrivals</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="items-grid">
+        <!-- Item Card 1 -->
+        <div class="item-card" data-category="tools" data-price="25" data-rating="4.8">
+          <div class="item-badge popular">Popular</div>
+          <div class="item-image">
+            <img src="power-drill.jpg" alt="Power Drill">
+            <div class="quick-view"><i class="fas fa-eye"></i> Quick View</div>
+          </div>
+          <div class="item-details">
+            <div class="item-header">
+              <h3>Heavy-Duty Power Drill</h3>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="item-meta">
+              <span class="item-price"><span class="price-unit">/day</span></span>
+              <span class="item-rating">
+                <i class="fas fa-star"></i> 4.8 <span class="review-count">(124)</span>
+              </span>
+            </div>
+            <div class="item-features">
+              <span><i class="fas fa-bolt"></i> Cordless</span>
+              <span><i class="fas fa-battery-full"></i> 20V</span>
+              <span><i class="fas fa-tools"></i> 18 Accessories</span>
+            </div>
+            <div class="item-footer">
+              <span class="item-location"><i class="fas fa-map-marker-alt"></i> Baku</span>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item Card 2 -->
+        <div class="item-card" data-category="electronics" data-price="40" data-rating="4.5">
+          <div class="item-badge new">New</div>
+          <div class="item-image">
+            <img src="projector.webp" alt="HD Projector">
+            <div class="quick-view"><i class="fas fa-eye"></i> Quick View</div>
+          </div>
+          <div class="item-details">
+            <div class="item-header">
+              <h3>HD Home Theater Projector</h3>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="item-meta">
+              <span class="item-price"><span class="price-unit">/day</span></span>
+              <span class="item-rating">
+                <i class="fas fa-star"></i> 4.5 <span class="review-count">(87)</span>
+              </span>
+            </div>
+            <div class="item-features">
+              <span><i class="fas fa-tv"></i> 1080p</span>
+              <span><i class="fas fa-volume-up"></i> Built-in Speakers</span>
+              <span><i class="fas fa-video"></i> 300" Screen</span>
+            </div>
+            <div class="item-footer">
+              <span class="item-location"><i class="fas fa-map-marker-alt"></i> Sumqayit</span>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item Card 3 -->
+        <div class="item-card" data-category="party" data-price="120" data-rating="4.9">
+          <div class="item-badge discount">10% Off</div>
+          <div class="item-image">
+            <img src="bounce-house.webp" alt="Bounce House">
+            <div class="quick-view"><i class="fas fa-eye"></i> Quick View</div>
+          </div>
+          <div class="item-details">
+            <div class="item-header">
+              <h3>Kids Bounce House</h3>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="item-meta">
+              <span class="item-price"><span class="price-unit">/day</span></span>
+              <span class="item-rating">
+                <i class="fas fa-star"></i> 4.9 <span class="review-count">(203)</span>
+              </span>
+            </div>
+            <div class="item-features">
+              <span><i class="fas fa-child"></i> 10' x 10'</span>
+              <span><i class="fas fa-fan"></i> Blower Included</span>
+              <span><i class="fas fa-users"></i> 6 Kids</span>
+            </div>
+            <div class="item-footer">
+              <span class="item-location"><i class="fas fa-map-marker-alt"></i> Ganja</span>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item Card 4 -->
+        <div class="item-card" data-category="outdoor" data-price="35" data-rating="4.7">
+          <div class="item-image">
+            <img src="camping-tent.webp" alt="Camping Tent">
+            <div class="quick-view"><i class="fas fa-eye"></i> Quick View</div>
+          </div>
+          <div class="item-details">
+            <div class="item-header">
+              <h3>4-Person Camping Tent</h3>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="item-meta">
+              <span class="item-price"><span class="price-unit">/day</span></span>
+              <span class="item-rating">
+                <i class="fas fa-star"></i> 4.7 <span class="review-count">(156)</span>
+              </span>
+            </div>
+            <div class="item-features">
+              <span><i class="fas fa-user-friends"></i> 4 Person</span>
+              <span><i class="fas fa-umbrella-beach"></i> Weatherproof</span>
+              <span><i class="fas fa-sun"></i> UV Protection</span>
+            </div>
+            <div class="item-footer">
+              <span class="item-location"><i class="fas fa-map-marker-alt"></i> Baku</span>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="view-more">
+        <button class="view-more-btn">View All 1,200+ Items <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Shary.az?</h2>
+      <p class="section-subtitle">The smarter way to get what you need</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Secure Rentals</h3>
+          <p>Verified users and secure payments for worry-free transactions</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>Save Money</h3>
+          <p>Rent for a fraction of retail price and avoid storage costs</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Sustainable</h3>
+          <p>Reduce waste by sharing resources with your community</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Support</h3>
+          <p>Our team is always available to help with any questions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">Trusted by thousands of happy renters</p>
+      
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Rented a power washer for my home renovation and saved hundreds compared to buying. The process was seamless!"</p>
+          <div class="user-info">
+            <img src="user1.jpg" alt="Alex Johnson" class="user-avatar">
+            <div>
+              <h4>Alex Johnson</h4>
+              <p class="user-location">Baku, Azerbaijan</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The bounce house made my daughter's birthday party unforgettable. Delivery and setup were included - amazing service!"</p>
+          <div class="user-info">
+            <img src="user2.jpg" alt="Leyla Mammadova" class="user-avatar">
+            <div>
+              <h4>Leyla Mammadova</h4>
+              <p class="user-location">Ganja, Azerbaijan</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"As a small business owner, renting equipment through Shary.az has saved me thousands in capital expenses."</p>
+          <div class="user-info">
+            <img src="user3.jpg" alt="Samir Aliyev" class="user-avatar">
+            <div>
+              <h4>Samir Aliyev</h4>
+              <p class="user-location">Sumqayit, Azerbaijan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Items Available</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Positive Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Customer Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Rent Something Amazing?</h2>
+        <p>Join thousands of happy customers who save money and space by renting</p>
+        <div class="cta-buttons">
+          <button class="cta-primary">Browse Items</button>
+          <button class="cta-secondary">List Your Item</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <!-- About Column -->
+        <div class="footer-column about-column">
+          <h3 class="footer-logo"><i class="fas fa-exchange-alt"></i>Shary.az</h3>
+          <p class="footer-about">Shary.az connects people who need items with those who have them to share, creating a sustainable and affordable rental economy.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links Column -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Browse Items</a></li>
+            <li><a href="#">List an Item</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Categories Column -->
+        <div class="footer-column">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Tools & Equipment</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Party Supplies</a></li>
+            <li><a href="#">Outdoor Gear</a></li>
+            <li><a href="#">Sports Equipment</a></li>
+            <li><a href="#">Special Occasions</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Safety Tips</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="footer-column newsletter-column">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new items and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div class="app-download">
+            <p>Get the App</p>
+            <div class="app-buttons">
+              <a href="#"><img src="app-store.png" alt="App Store"></a>
+              <a href="#"><img src="google-play.png" alt="Google Play"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <span>We accept:</span>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2025 Shary.az | All rights reserved | Made with <i class="fas fa-heart"></i> in Azerbaijan</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
