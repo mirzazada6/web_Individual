@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Locations - SHARY.az</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <h1 class="logo"><i class="fas fa-exchange-alt"></i>SHARY.az</h1>
+          <p class="tagline">Rent anything, anytime, anywhere</p>
+        </div>
+        
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> How it works?</a></li>
+            <li><a href="#"><i class="fas fa-box-open"></i> Items</a></li>
+            <li><a href="location.html" class="active"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
+            <li><a href="contact.html"><i class="fas fa-headset"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <a href="signin.html" class="sign-in-btn"><i class="fas fa-user"></i> Sign In</a>
+          <a href="signup.html" class="sign-up-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Locations Hero Section -->
+  <section class="hero" style="background: linear-gradient(135deg, #48bb78 0%, #38b2ac 100%);">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Find Items Near You</h2>
+        <p>Browse available items in cities across Azerbaijan</p>
+        
+        <div class="search-bar" style="max-width: 600px;">
+          <div class="location-input" style="flex: 1;">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Enter your city or address">
+          </div>
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="rental-items" style="padding: 0;">
+    <div id="map" style="height: 500px; width: 100%;"></div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Available Cities</h2>
+      <p class="section-subtitle">Find items available for rent in these locations</p>
+      
+      <div class="cities-grid">
+        <div class="city-card">
+          <div class="city-image" style="background-image: url('baku.jpg');">
+            <div class="item-count">1,200+ items</div>
+          </div>
+          <div class="city-info">
+            <h3>Baku</h3>
+            <p>The capital city with the largest selection of rental items</p>
+            <a href="#" class="rent-btn">Browse Items</a>
+          </div>
+        </div>
+        
+        <div class="city-card">
+          <div class="city-image" style="background-image: url('ganja.jpg');">
+            <div class="item-count">450+ items</div>
+          </div>
+          <div class="city-info">
+            <h3>Ganja</h3>
+            <p>Great selection of tools and party equipment</p>
+            <a href="#" class="rent-btn">Browse Items</a>
+          </div>
+        </div>
+        
+        <div class="city-card">
+          <div class="city-image" style="background-image: url('sumqayit.jpg');">
+            <div class="item-count">380+ items</div>
+          </div>
+          <div class="city-info">
+            <h3>Sumqayit</h3>
+            <p>Industrial tools and outdoor gear available</p>
+            <a href="#" class="rent-btn">Browse Items</a>
+          </div>
+        </div>
+        
+        <div class="city-card">
+          <div class="city-image" style="background-image: url('lankaran.jpg');">
+            <div class="item-count">210+ items</div>
+          </div>
+          <div class="city-info">
+            <h3>Lankaran</h3>
+            <p>Fishing and camping equipment specialists</p>
+            <a href="#" class="rent-btn">Browse Items</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pickup Locations Section -->
+  <section class="why-choose-us" style="background: white; color: var(--text-color);">
+    <div class="container">
+      <h2 class="section-title">Our Pickup Locations</h2>
+      <p class="section-subtitle" style="color: var(--text-light);">Convenient places to collect your rentals</p>
+      
+      <div class="locations-container">
+        <div class="location-card">
+          <div class="location-image">
+            <img src="https://www.themerchantbaku.com/storage/app/media/initial/Updated/mhgydmbseaviewnight-1.jpg" alt="Baku Central Location">
+          </div>
+          <div class="location-details">
+            <h3>Baku Central Hub</h3>
+            <div class="location-meta">
+              <span><i class="fas fa-map-marker-alt"></i> 28 May Street, Baku</span>
+              <span><i class="fas fa-phone"></i> +994 12 345 67 89</span>
+              <span><i class="fas fa-clock"></i> 8:00 AM - 10:00 PM Daily</span>
+            </div>
+            <p>Our flagship location with the largest inventory and expert staff to help you find exactly what you need.</p>
+            <div class="location-features">
+              <span><i class="fas fa-car"></i> Free Parking</span>
+              <span><i class="fas fa-wifi"></i> Free WiFi</span>
+              <span><i class="fas fa-coffee"></i> Coffee Lounge</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="location-card">
+          <div class="location-image">
+            <img src="https://gezmeli.az/wp-content/uploads/2020/08/Ulica-Cavad-xan-G%C9%99nc%C9%99-1.jpg" alt="Ganja Location">
+          </div>
+          <div class="location-details">
+            <h3>Ganja Rental Center</h3>
+            <div class="location-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Nizami Street, Ganja</span>
+              <span><i class="fas fa-phone"></i> +994 22 345 67 89</span>
+              <span><i class="fas fa-clock"></i> 9:00 AM - 8:00 PM Daily</span>
+            </div>
+            <p>Conveniently located in the city center with a focus on party and event equipment rentals.</p>
+            <div class="location-features">
+              <span><i class="fas fa-truck"></i> Delivery Available</span>
+              <span><i class="fas fa-tshirt"></i> Costume Rentals</span>
+              <span><i class="fas fa-music"></i> Audio Equipment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Can't Find Your City?</h2>
+        <p>We're expanding to new locations all the time. Let us know where you'd like to see SHARY.az next!</p>
+        <div class="cta-buttons">
+          <button class="cta-primary">Request Expansion</button>
+          <button class="cta-secondary">Contact Support</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <!-- About Column -->
+        <div class="footer-column about-column">
+          <h3 class="footer-logo"><i class="fas fa-exchange-alt"></i>Shary.az</h3>
+          <p class="footer-about">Shary.az connects people who need items with those who have them to share, creating a sustainable and affordable rental economy.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links Column -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Browse Items</a></li>
+            <li><a href="#">List an Item</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Categories Column -->
+        <div class="footer-column">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Tools & Equipment</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Party Supplies</a></li>
+            <li><a href="#">Outdoor Gear</a></li>
+            <li><a href="#">Sports Equipment</a></li>
+            <li><a href="#">Special Occasions</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Safety Tips</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="footer-column newsletter-column">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new items and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div class="app-download">
+            <p>Get the App</p>
+            <div class="app-buttons">
+            <div class="appstore">
+            <a href="https://www.apple.com/app-store/" target="_blank"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+            </div>
+            <div class="googleplay">
+            <a href="https://play.google.com/store" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <span>We accept:</span>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2025 Shary.az | All rights reserved | Made with <i class="fas fa-heart"></i> in Azerbaijan</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([40.4093, 49.8671], 8); // Centered on Azerbaijan
+    
+    // Add tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Add markers for major cities
+    const cities = [
+      { name: "Baku", coords: [40.4093, 49.8671], items: 1200 },
+      { name: "Ganja", coords: [40.6828, 46.3606], items: 450 },
+      { name: "Sumqayit", coords: [40.5897, 49.6686], items: 380 },
+      { name: "Lankaran", coords: [38.7543, 48.8506], items: 210 },
+      { name: "Shirvan", coords: [39.9375, 48.9290], items: 150 },
+      { name: "Nakhchivan", coords: [39.2089, 45.4122], items: 90 }
+    ];
+    
+    cities.forEach(city => {
+      const marker = L.marker(city.coords).addTo(map);
+      marker.bindPopup(`
+        <b>${city.name}</b><br>
+        ${city.items}+ items available<br>
+        <button style="background: var(--primary-color); color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-top: 5px;">
+          Browse Items
+        </button>
+      `);
+    });
+  </script>
+</body>
+</html>
