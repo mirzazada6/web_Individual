@@ -41,6 +41,18 @@ This project was developed collaboratively using GitHub's collaboration features
 
 Sanan – Created the base HTML structure and worked on overall design
 
+At the beginning of the project, I created the main HTML structure. I built the foundational skeleton and layout of the website so that my teammates could easily develop their own features on top of a clean and organized base. I also established a consistent design language to ensure that all pages look well-organized and professional.
+
+Tasks I completed:
+
+1. Created the main HTML skeleton for the index.html homepage
+
+2. Built the structure for the navigation bar, header, and footer
+
+3. Defined the core styling principles to maintain design consistency across all pages
+
+4. Designed the initial layout in the CSS file so that other team members could continue development smoothly
+
 Omar – Developed the signin and signup pages and added form functionality
 
 Irana  – Built the location and contact subpages; made improvements to the main page
