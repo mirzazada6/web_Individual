@@ -56,6 +56,20 @@ Tasks I completed:
 
 ## Omar – Developed the signin and signup pages and added form functionality
 
+During the development process, my main responsibility was to implement user authentication pages. I created both the signin and signup subpages with fully functional input forms. These pages are essential for enabling user access and account creation within the platform.
+
+Tasks I completed:
+
+Created signin.html and signup.html pages
+
+1. Designed and structured input forms for user login and registration
+
+2. Implemented basic validation and interactivity using JavaScript
+
+3. Ensured that both pages follow the same design language as the rest of the site
+
+4. I focused on making the user experience simple and intuitive, especially for first-time users who need to register or log in.
+
 ## Irana  – Built the location and contact subpages; made improvements to the main page
 
 I was responsible for creating the location and contact subpages. I designed and implemented these pages to enhance user experience by providing essential information about item locations and a way to reach out to the team. Additionally, I made several improvements to the main page to ensure better usability and visual appeal.
