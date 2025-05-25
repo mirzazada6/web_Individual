@@ -21,7 +21,8 @@ To run the project locally:
 2. Open the project folder in Visual Studio Code or any other code editor.
 3. Open index.html in your browser to view the homepage.
 
-📁 Project Structure and Pages
+## 📁 Project Structure and Pages
+
 index.html – Homepage with overview and main features
 
 contact.html – Page with contact form and team information
