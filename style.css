@@ -1638,6 +1638,7 @@
 .video-demo{
   display: flex;
   justify-content: center;
+  padding-bottom: 15%;
 }
 .location-image{
   margin-top: 7%;
