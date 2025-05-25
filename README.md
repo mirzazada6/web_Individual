@@ -39,7 +39,7 @@ script.js – JavaScript file handling interactivity and functionality
 👨‍💻 Team and Contributions
 This project was developed collaboratively using GitHub's collaboration features.
 
-Sanan – Created the base HTML structure and worked on overall design
+## Sanan – Created the base HTML structure and worked on overall design
 
 At the beginning of the project, I created the main HTML structure. I built the foundational skeleton and layout of the website so that my teammates could easily develop their own features on top of a clean and organized base. I also established a consistent design language to ensure that all pages look well-organized and professional.
 
@@ -53,11 +53,23 @@ Tasks I completed:
 
 4. Designed the initial layout in the CSS file so that other team members could continue development smoothly
 
-Omar – Developed the signin and signup pages and added form functionality
+## Omar – Developed the signin and signup pages and added form functionality
 
-Irana  – Built the location and contact subpages; made improvements to the main page
+## Irana  – Built the location and contact subpages; made improvements to the main page
 
-Mansuma – (To be added later)
+I was responsible for creating the location and contact subpages. I designed and implemented these pages to enhance user experience by providing essential information about item locations and a way to reach out to the team. Additionally, I made several improvements to the main page to ensure better usability and visual appeal.
+
+Tasks I completed:
+
+1. Developed the location.html page, displaying item locations or regional info
+
+2. Built the contact.html page with a contact form and team details
+
+3. Improved the main index.html page layout and design
+
+4. Ensured consistency of design and responsiveness across these pages
+
+## Mansuma – (To be added later)
 
 📌 Notes
 This project was developed as a team web development assignment.
