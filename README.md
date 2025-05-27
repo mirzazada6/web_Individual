@@ -84,7 +84,19 @@ Tasks I completed:
 
 4. Ensured consistency of design and responsiveness across these pages
 
-## Mansuma – (To be added later)
+## Mansuma – Create the items subpage
+
+I was responsible for creating the items subpage in the SHARY.az project. This page presents a list of items available for rent to users.
+
+I developed the page using only HTML and CSS. The main aspects I focused on were:
+
+1. Visually displaying items with their images, names, descriptions, and prices.
+
+2. Ensuring the overall design is consistent with the other pages.
+
+3. Providing a simple, clear, and functional layout for users.
+
+This page is one of the core parts of the project and helps users easily find and choose the items they need.
 
 📌 Notes
 This project was developed as a team web development assignment.
