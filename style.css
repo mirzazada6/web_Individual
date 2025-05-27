@@ -2027,3 +2027,32 @@ body {
   width: 70%;
   height: 40%;
 }
+
+/* Legal Pages Styles */
+.legal-content {
+padding: 20px 0;
+line-height: 1.8;
+color: var(--text-color);
+}
+
+.legal-content h3 {
+margin: 25px 0 15px;
+color: var(--secondary-color);
+font-size: 1.2rem;
+}
+
+.legal-content p, .legal-content ul {
+margin-bottom: 15px;
+}
+
+.legal-content ul {
+padding-left: 20px;
+}
+
+.legal-content li {
+margin-bottom: 8px;
+}
+
+.legal-content strong {
+font-weight: 600;
+}
