@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shary.az - Item Rental Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with improved navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <h1 class="logo"><i class="fas fa-exchange-alt"></i>SHARY.az</h1>
+          <p class="tagline">Rent anything, anytime, anywhere</p>
+        </div>
+        
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html"><i class="fas fa-question-circle"></i> How it works?</a></li>
+            <li><a href="items.html"><i class="fas fa-box-open"></i> Items</a></li>
+            <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-headset"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <a href="signin.html" class="sign-in-btn"><i class="fas fa-user"></i> Sign In</a>
+          <a href="signup.html" class="sign-up-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+
+ <!-- Main Content -->
+  <main class="items-main">
+    <!-- Hero Section -->
+    <section class="items-hero">
+      <div class="container">
+        <h2>Find What You Need</h2>
+        <p>Rent high-quality items for any occasion at affordable prices</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for items...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-options">
+          <div class="filter-group">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter">
+              <option value="all">All Categories</option>
+              <option value="tools">Tools</option>
+              <option value="electronics">Electronics</option>
+              <option value="party">Party Supplies</option>
+              <option value="sports">Sports Equipment</option>
+              <option value="outdoor">Outdoor Gear</option>
+              <option value="home">Home & Garden</option>
+              <option value="vehicles">Vehicles</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+              <option value="popular">Most Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest Arrivals</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="location-filter">Location:</label>
+            <select id="location-filter">
+              <option value="all">All Locations</option>
+              <option value="baku">Baku</option>
+              <option value="ganja">Ganja</option>
+              <option value="sumqayit">Sumqayit</option>
+              <option value="other">Other Cities</option>
+            </select>
+          </div>
+          
+          <button class="filter-reset">Reset Filters</button>
+        </div>
+        
+        <div class="filter-tags">
+          <span class="filter-tag">Tools <i class="fas fa-times"></i></span>
+          <span class="filter-tag">Baku <i class="fas fa-times"></i></span>
+          <span class="filter-tag">Under $50/day <i class="fas fa-times"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Items Grid Section -->
+    <section class="rental-items">
+      <div class="container">
+        <div class="section-header">
+          <h2>Available Items</h2>
+          <div class="view-toggle">
+            <button class="view-grid active"><i class="fas fa-th"></i></button>
+            <button class="view-list"><i class="fas fa-list"></i></button>
+          </div>
+        </div>
+        
+        <div class="items-grid">
+          <!-- Item Card 1 -->
+          <div class="item-card" data-category="tools" data-price="25" data-rating="4.8">
+            <div class="item-badge">Popular</div>
+            <div class="item-image">
+              <img src="power-drill.jpg" alt="Power Drill">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>Heavy-Duty Power Drill</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.8 (124)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Baku
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-bolt"></i> Cordless</span>
+                <span><i class="fas fa-battery-full"></i> 20V</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 2 -->
+          <div class="item-card" data-category="electronics" data-price="40" data-rating="4.5">
+            <div class="item-badge">New</div>
+            <div class="item-image">
+              <img src="projector.webp" alt="HD Projector">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>HD Home Theater Projector</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.5 (87)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Ganja
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-tv"></i> 1080p</span>
+                <span><i class="fas fa-volume-up"></i> Built-in Speakers</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 3 -->
+          <div class="item-card" data-category="party" data-price="120" data-rating="4.9">
+            <div class="item-image">
+              <img src="bounce-house.webp" alt="Bounce House">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>Kids Bounce House</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.9 (203)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Baku
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-child"></i> 10' x 10'</span>
+                <span><i class="fas fa-fan"></i> Blower Included</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 4 -->
+          <div class="item-card" data-category="outdoor" data-price="35" data-rating="4.7">
+            <div class="item-image">
+              <img src="camping-tent.webp" alt="Camping Tent">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>4-Person Camping Tent</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.7 (156)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Sumqayit
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-user-friends"></i> 4 Person</span>
+                <span><i class="fas fa-umbrella-beach"></i> Weatherproof</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 5 -->
+          <div class="item-card" data-category="tools" data-price="18" data-rating="4.6">
+            <div class="item-image item1">
+              <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/pressure-washer-y1MKePC-600.jpg" alt="Pressure Washer">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>Electric Pressure Washer</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.6 (92)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Baku
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-tint"></i> 1500 PSI</span>
+                <span><i class="fas fa-plug"></i> Electric</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 6 -->
+          <div class="item-card" data-category="electronics" data-price="55" data-rating="4.4">
+            <div class="item-badge">Deal</div>
+            <div class="item-image item2">
+              <img src="https://atlas-content-cdn.pixelsquid.com/assets_v2/239/2392941215445161118/jpeg-600/G03.jpg?modifiedAt=1" alt="Camera">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>DSLR Camera Kit</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.4 (78)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Baku
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-camera"></i> 24MP</span>
+                <span><i class="fas fa-video"></i> 1080p Video</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 7 -->
+          <div class="item-card" data-category="sports" data-price="30" data-rating="4.3">
+            <div class="item-image">
+              <img src="https://www.balfesbikes.co.uk/images/Marlin4-24-41613-C-Primary.jpg?width=1998&height=1998&quality=85&mode=pad&format=webp&bgcolor=ffffff" alt="Mountain Bike">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>Mountain Bike</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.3 (115)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Ganja
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-bicycle"></i> 21-Speed</span>
+                <span><i class="fas fa-mountain"></i> All-Terrain</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+          
+          <!-- Item Card 8 -->
+          <div class="item-card" data-category="home" data-price="22" data-rating="4.7">
+            <div class="item-image item8">
+              <img src="https://media.daimer.com/modules/ecs/images/125829160_xl.png?rev=38FC" alt="Carpet Cleaner">
+              <div class="quick-view">Quick View</div>
+            </div>
+            <div class="item-details">
+              <h3>Professional Carpet Cleaner</h3>
+              <div class="item-meta">
+                <span class="item-price">/day</span>
+                <span class="item-rating">
+                  <i class="fas fa-star"></i> 4.7 (64)
+                </span>
+              </div>
+              <div class="item-location">
+                <i class="fas fa-map-marker-alt"></i> Baku
+              </div>
+              <div class="item-features">
+                <span><i class="fas fa-soap"></i> Deep Cleaning</span>
+                <span><i class="fas fa-water"></i> 1 Gal Tank</span>
+              </div>
+              <button class="rent-btn">Rent Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <h3>Have something to rent out?</h3>
+        <p>Join our community and start earning money from your unused items</p>
+        <button class="cta-btn">List Your Item</button>
+      </div>
+    </section>
+  </main>
+
+
+ <!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <!-- About Column -->
+        <div class="footer-column about-column">
+          <h3 class="footer-logo"><i class="fas fa-exchange-alt"></i>Shary.az</h3>
+          <p class="footer-about">Shary.az connects people who need items with those who have them to share, creating a sustainable and affordable rental economy.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links Column -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">How It Works</a></li>
+            <li><a href="items.html">Browse Items</a></li>
+            <li><a href="items.html">List an Item</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Categories Column -->
+        <div class="footer-column">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="items.html">Tools & Equipment</a></li>
+            <li><a href="items.html">Electronics</a></li>
+            <li><a href="items.html">Party Supplies</a></li>
+            <li><a href="items.html">Outdoor Gear</a></li>
+            <li><a href="items.html">Sports Equipment</a></li>
+            <li><a href="items.html">Special Occasions</a></li>
+          </ul>
+        </div>
+        
+        <!-- Support Column -->
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Safety Tips</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="footer-column newsletter-column">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new items and special offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div class="app-download">
+            <p>Get the App</p>
+            <div class="app-buttons">
+            <div class="appstore">
+            <a href="https://www.apple.com/app-store/" target="_blank"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+            </div>
+            <div class="googleplay">
+            <a href="https://play.google.com/store" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="payment-methods">
+          <span>We accept:</span>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2025 Shary.az | All rights reserved | Made in Azerbaijan</p>
+        </div>
+      </div>
+    </div>
+  </footer>
